@@ -1,0 +1,939 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon1.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="使用Terminal或CMD管理git仓库太麻烦,我们可以使用SourceTree这样的图形界面软件来轻松的管理我们的git仓库">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用SourceTree管理git仓库">
+<meta property="og:url" content="http://melodd-blog.github.io/2017/06/13/使用SourceTree管理git仓库/index.html">
+<meta property="og:site_name" content="Melodd Blog">
+<meta property="og:description" content="使用Terminal或CMD管理git仓库太麻烦,我们可以使用SourceTree这样的图形界面软件来轻松的管理我们的git仓库">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/01.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/03.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/04.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/05.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/06.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/07.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/09.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/08.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/11.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/12.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/13.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/14.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/15.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/17.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/18.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/19.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/03/20.png">
+<meta property="og:updated_time" content="2017-06-13T08:27:51.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用SourceTree管理git仓库">
+<meta name="twitter:description" content="使用Terminal或CMD管理git仓库太麻烦,我们可以使用SourceTree这样的图形界面软件来轻松的管理我们的git仓库">
+<meta name="twitter:image" content="http://melodd-blog.github.io/images/03/01.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://melodd-blog.github.io/2017/06/13/使用SourceTree管理git仓库/"/>
+
+
+
+
+
+  <title> 使用SourceTree管理git仓库 | Melodd Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7e0f95d0020030ed9a9aacb476d4b710";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Melodd Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">明年是你的本命年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://melodd-blog.github.io/2017/06/13/使用SourceTree管理git仓库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="melodd">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/melodd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melodd Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用SourceTree管理git仓库
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-13T14:57:07+08:00">
+                2017-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/06/13/使用SourceTree管理git仓库/" class="leancloud_visitors" data-flag-title="使用SourceTree管理git仓库">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/03/01.png" class="full-image"></p>
+<div class="note info"><p>使用Terminal或CMD管理git仓库太麻烦,我们可以使用SourceTree这样的图形界面软件来轻松的管理我们的git仓库</p>
+</div>
+
+<a id="more"></a>
+
+
+
+
+
+好,首先不管使用Terminal还是SourceTree管理git仓库,首先我们得有仓库可以管理.
+
+<div class="note success"><p>我们先去github上面新建一个我们的仓库 </p>
+</div>
+<p>登录自己的github帐号,然后点击右上角的加号,选择你一个选项:new repository(一个新的仓库)<br><img src="/images/03/03.png" alt=""><br>接下来就是设置我们的新仓库<br><img src="/images/03/04.png" alt=""></p>
+<blockquote>
+<p>因为我的项目是使用框架搭建起来的,里面有用到一些公共npm依赖包,他们都在node_modules文件夹下,所有,我选择过滤node_modules,如果一不小心写错的话,你还是可以自己去仓库里面的.gitgnore文件下更改.</p>
+</blockquote>
+<p>创建好我们的仓库了,我们只需要我们远程的仓库的地址就可以,现在clone下我们的仓库地址就可以了,<br><img src="/images/03/05.png" alt=""></p>
+<h3 id="github仓库我们已经建立好了-接下来-该SourceTree登场"><a href="#github仓库我们已经建立好了-接下来-该SourceTree登场" class="headerlink" title="github仓库我们已经建立好了,接下来,该SourceTree登场"></a>github仓库我们已经建立好了,接下来,该SourceTree登场</h3><div class="note success"><p>SourceTree的下载和安装过程,在这里我就不说了,一直next就可以,安装过程中需要你科学上网,注册一个他们的帐号. </p>
+</div>
+<h4 id="和使用Terminal一样-第一步就是clone我们的远程仓库到本地来"><a href="#和使用Terminal一样-第一步就是clone我们的远程仓库到本地来" class="headerlink" title="和使用Terminal一样,第一步就是clone我们的远程仓库到本地来"></a>和使用Terminal一样,第一步就是clone我们的远程仓库到本地来</h4><p>点击新仓库,然后从URLclone<br><img src="/images/03/06.png" alt=""><br>把你的远程仓库的地址粘贴到这里<br><img src="/images/03/07.png" alt=""><br>你的仓库地址<br><img src="/images/03/09.png" alt=""><br>默认本地仓库地址是:<code>/Users/WXK/xiaozhangzhang</code><br>我在自己的桌面上新建了一个同名的文件夹,本地仓库的地址改成了桌面的同名文件夹<br>你们自己随意.<br><img src="/images/03/08.png" alt=""><br>本地仓库操作界面<br><img src="/images/03/11.png" alt=""></p>
+<p>这个时候,你就可以把你的项目考进本地仓库里,或者在这直接开始新建你的工程<br><img src="/images/03/12.png" alt=""></p>
+<h4 id="这时候-我刚把我的项目都考进了我的本地仓库下"><a href="#这时候-我刚把我的项目都考进了我的本地仓库下" class="headerlink" title="这时候,我刚把我的项目都考进了我的本地仓库下"></a>这时候,我刚把我的项目都考进了我的本地仓库下</h4><p>Atom编译器里绿色的都表示我在工作区新添加的文佳,但是没有加到本地仓库的缓存区里面<br><img src="/images/03/13.png" alt=""><br><img src="/images/03/14.png" alt=""><br><img src="/images/03/15.png" alt=""></p>
+<h4 id="这时候提交-上传到本地仓库"><a href="#这时候提交-上传到本地仓库" class="headerlink" title="这时候提交,上传到本地仓库"></a>这时候提交,上传到本地仓库</h4><p><img src="/images/03/17.png" alt=""><br>这时,你的项目已经存到了你的本地仓库了,但是还需要push到你的远程github仓库上.<br><img src="/images/03/18.png" alt=""><br><img src="/images/03/19.png" alt=""><br><code>git push oringin master</code> 完成,你可以去github仓库,查看你刚刚上传的代码了<br><img src="/images/03/20.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qq_qun.jpg" alt="melodd wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的qq群号，加入我们的web技术群！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/13/打造Mac下的终极Shell/" rel="next" title="打造Mac下的终极Shell">
+                <i class="fa fa-chevron-left"></i> 打造Mac下的终极Shell
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/melodd.jpg"
+               alt="melodd" />
+          <p class="site-author-name" itemprop="name">melodd</p>
+           
+              <p class="site-description motion-element" itemprop="description">授之于鱼不如授之于渔,你说是不是:小张张。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/melodd-x" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/68742822f0de" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              你要去哪,我给你开个门啊,不要金币的。
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jikexueyuan.com" title="极客学院" target="_blank">极客学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bootcss.com" title="Bootstrap" target="_blank">Bootstrap</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=25906124&auto=0&height=66"></iframe>
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库我们已经建立好了-接下来-该SourceTree登场"><span class="nav-number">1.</span> <span class="nav-text">github仓库我们已经建立好了,接下来,该SourceTree登场</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#和使用Terminal一样-第一步就是clone我们的远程仓库到本地来"><span class="nav-number">1.1.</span> <span class="nav-text">和使用Terminal一样,第一步就是clone我们的远程仓库到本地来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候-我刚把我的项目都考进了我的本地仓库下"><span class="nav-number">1.2.</span> <span class="nav-text">这时候,我刚把我的项目都考进了我的本地仓库下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候提交-上传到本地仓库"><span class="nav-number">1.3.</span> <span class="nav-text">这时候提交,上传到本地仓库</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">melodd</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pCXnU6xEUiaeVE9A805iTvmv-gzGzoHsz", "KUsTxa5wdFVWfgbfVBzJ2urt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

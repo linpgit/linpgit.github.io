@@ -1,0 +1,996 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Shell," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon1.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="还在用Mac自带终端的同学们,你们有福了,我来拯救你们了.">
+<meta name="keywords" content="Shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="打造Mac下的终极Shell">
+<meta property="og:url" content="http://melodd-blog.github.io/2017/05/13/打造Mac下的终极Shell/index.html">
+<meta property="og:site_name" content="Melodd Blog">
+<meta property="og:description" content="还在用Mac自带终端的同学们,你们有福了,我来拯救你们了.">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell1.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell2.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell3.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell4.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell5.jpg">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell7.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell8.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell9.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell10.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell11.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell12.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell13.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell14.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell15.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell16.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/Shell/Shell2.png">
+<meta property="og:updated_time" content="2017-05-13T15:43:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="打造Mac下的终极Shell">
+<meta name="twitter:description" content="还在用Mac自带终端的同学们,你们有福了,我来拯救你们了.">
+<meta name="twitter:image" content="http://melodd-blog.github.io/images/Shell/Shell1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://melodd-blog.github.io/2017/05/13/打造Mac下的终极Shell/"/>
+
+
+
+
+
+  <title> 打造Mac下的终极Shell | Melodd Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7e0f95d0020030ed9a9aacb476d4b710";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Melodd Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">明年是你的本命年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://melodd-blog.github.io/2017/05/13/打造Mac下的终极Shell/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="melodd">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/melodd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melodd Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                打造Mac下的终极Shell
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-13T21:24:08+08:00">
+                2017-05-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/05/13/打造Mac下的终极Shell/" class="leancloud_visitors" data-flag-title="打造Mac下的终极Shell">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/Shell/Shell1.png" class="full-image"><br><div class="note info"><p>还在用Mac自带终端的同学们,你们有福了,我来拯救你们了. </p>
+</div><br><a id="more"></a></p>
+<h2 id="正文开始"><a href="#正文开始" class="headerlink" title="正文开始"></a>正文开始</h2><blockquote>
+<p>上图就是系统默认的终端,可能你们也是这样的,下图就是我配置完的<br>||V||</p>
+</blockquote>
+<p><img src="/images/Shell/Shell2.png" alt=""></p>
+<blockquote>
+<p>好了!  炫耀完毕,再见.</p>
+</blockquote>
+<h3 id="首先-介绍下几个概念"><a href="#首先-介绍下几个概念" class="headerlink" title="首先:介绍下几个概念?"></a>首先:介绍下几个概念?</h3><h4 id="–-Shell"><a href="#–-Shell" class="headerlink" title="– Shell"></a>– Shell</h4><blockquote>
+<p>是指“提供使用者使用界面”的软件（命令解析器）,它接收用户命令，然后调用相应的应用程序.<br>Shell是Linux/Unix的一个外壳，你理解成衣服也行。它负责外界与Linux内核的交互，接收用户或其他应用程序的命令，然后把这些命令转化成内核能理解的语言，传给内核，内核是真正干活的，干完之后再把结果返回用户或应用程序。</p>
+</blockquote>
+<p>基本上shell分两大类：<br>一：图形界面shell（Graphical User Interface shell 即 GUI shell）<br>例如：应用最为广泛的 Windows Explorer （微软的windows系列操作系统），还有也包括广为人知的 Linux shell，其中linux shell 包括 X window manager (BlackBox和FluxBox），以及功能更强大的CDE、GNOME、KDE、 XFCE。<br>二：命令行式shell（Command Line Interface shell ，即CLI shell）<br>例如：<br>bash / sh / ksh / csh（Unix/linux 系统）<br>（MS-DOS系统）<br>cmd.exe/ 命令提示字符（Windows NT 系统）<br>Windows PowerShell（支持 .NET Framework 技术的 Windows NT 系统）<br>传统意义上的shell指的是命令行式的shell，以后如果不特别注明，shell是指命令行式的shell。<br>文字操作系统与外部最主要的接口就叫做shell。shell是操作系统最外面的一层。shell管理你与操作系统之间的交互：等待你输入，向操作系统解释你的输入，并且处理各种各样的操作系统的输出结果。</p>
+<p>想知道你的系统有几种shell，可以通过以下命令查看：<br><code>cat /etc/shells</code><br>显示如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/bin/bash</div><div class="line">/bin/csh</div><div class="line">/bin/ksh</div><div class="line">/bin/sh</div><div class="line">/bin/tcsh</div><div class="line">/bin/zsh</div></pre></td></tr></table></figure></p>
+<p>在 Linux 里执行这个命令和 Mac 略有不同，你会发现 Mac 多了一个 zsh，也就是说 OS X 系统预装了个 zsh，这是个神马 Shell 呢？</p>
+<p>目前常用的 Linux 系统和 OS X 系统的默认 Shell 都是 bash，但是真正强大的 Shell 是深藏不露的 zsh， 这货绝对是马车中的跑车，跑车中的飞行车，史称『终极 Shell』，但是由于配置过于复杂，所以初期无人问津，很多人跑过来看看 zsh 的配置指南，什么都不说转身就走了。直到有一天，国外有个穷极无聊的程序员开发出了一个能够让你快速上手的zsh项目，叫做「oh my zsh」，Github 网址是：<a href="https://github.com/robbyrussell/oh-my-zsh。这玩意就像「X天叫你学会" target="_blank" rel="external">https://github.com/robbyrussell/oh-my-zsh。这玩意就像「X天叫你学会</a> C++」系列，可以让你神功速成，而且是真的。</p>
+<h4 id="–-终端模拟器"><a href="#–-终端模拟器" class="headerlink" title="– 终端模拟器"></a>– 终端模拟器</h4><blockquote>
+<p>就是用来跑Shell的工具</p>
+</blockquote>
+<p>Mac自带的是terminal.app ,就是Terminal<br>就是它<br><img src="/images/Shell/Shell3.png" alt=""></p>
+<p>然而还有个比Terminal功能强大更多的iTerm2<br><img src="/images/Shell/Shell4.png" alt=""></p>
+<h4 id="所以"><a href="#所以" class="headerlink" title="所以"></a>所以</h4><h5 id="到这-你们应该大致的明白了-你们用的就是terminal-bash"><a href="#到这-你们应该大致的明白了-你们用的就是terminal-bash" class="headerlink" title="到这,你们应该大致的明白了,你们用的就是terminal + bash"></a>到这,你们应该大致的明白了,你们用的就是<code>terminal</code> + <code>bash</code></h5><h5 id="而我用的是iTerm2-oh-my-zsh-iterm2-colors-solarized-Powerline-fonts-agnoster-zsh-theme"><a href="#而我用的是iTerm2-oh-my-zsh-iterm2-colors-solarized-Powerline-fonts-agnoster-zsh-theme" class="headerlink" title="而我用的是iTerm2 + oh my zsh + iterm2-colors-solarized + Powerline fonts + agnoster.zsh-theme"></a>而我用的是<code>iTerm2</code> + <code>oh my zsh</code> + <code>iterm2-colors-solarized</code> + <code>Powerline fonts</code> + <code>agnoster.zsh-theme</code></h5><p><img src="/images/Shell/Shell5.jpg" alt=""></p>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="iTerm2"><a href="#iTerm2" class="headerlink" title="iTerm2"></a>iTerm2</h4><ul>
+<li>下载安装iTerm2</li>
+<li><a href="http://www.iterm2.com/" target="_blank" rel="external">去官网下载</a></li>
+<li>然后自己双击打开安装</li>
+</ul>
+<h4 id="Oh-My-Zsh"><a href="#Oh-My-Zsh" class="headerlink" title="Oh My Zsh"></a>Oh My Zsh</h4><ul>
+<li>先打开终端,输入<code>zsh --version</code> 查看zsh版本和是否有zsh,有就继续,  Mac自带.</li>
+<li>上文说了zsh配置不是人干的事,我们可以用「oh my zsh」来帮助我们</li>
+<li>安装方法一:<blockquote>
+<p>via curl</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></div></pre></td></tr></table></figure>
+<ul>
+<li>安装方法二:<blockquote>
+<p>via wget</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh -c <span class="string">"<span class="variable">$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)</span>"</span></div></pre></td></tr></table></figure>
+<ul>
+<li>把 zsh 设置成默认的 shell:<code>chsh -s /bin/zsh</code></li>
+<li>接下来我们要修改zsh主题</li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="external">官方文档</a></li>
+</ul>
+<h4 id="agnoster"><a href="#agnoster" class="headerlink" title="agnoster"></a>agnoster</h4><ul>
+<li>查看你当前zsh用的什么主题<code>echo $ZSH_THEME</code></li>
+<li>查看所有的zsh主题 先进入themes目录<code>~/.oh-my-zsh/themes</code>,再<code>ls</code>查看<br><img src="/images/Shell/Shell7.png" alt=""></li>
+<li>修改zsh主题<code>vim ~/.zshrc</code><br><img src="/images/Shell/Shell8.png" alt=""></li>
+<li>按<code>i</code>健进入插入模式编辑,<code>esc</code>进入正常模式,输入<code>:wq</code>保存退出 —-&gt;<a href="http://www.cnblogs.com/usergaojie/p/4583796.html" target="_blank" rel="external">vim 命令详解</a></li>
+<li>好了,重启下iTerm2,如果你的结果是这样的<br><img src="/images/Shell/Shell9.png" alt=""></li>
+<li>这就说明你电脑里没有Powerline fonts字体,这个字体必须需要这种字体支持</li>
+<li>接下来安装字体</li>
+</ul>
+<h4 id="Powerline-fonts"><a href="#Powerline-fonts" class="headerlink" title="Powerline fonts"></a>Powerline fonts</h4><ul>
+<li>进入你想放字体文件的目录</li>
+<li><p>克隆字体库到当前目录下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/powerline/fonts.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>进入fonts文件夹,并且安装字体</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> fonts</div><div class="line">./install.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p>好了,字体安好了,就设置iTerm2让他用这种字体,打开偏好设置<br><img src="/images/Shell/Shell10.png" alt=""><br><img src="/images/Shell/Shell11.png" alt=""><br><img src="/images/Shell/Shell12.png" alt=""><br><img src="/images/Shell/Shell13.png" alt=""></p>
+</li>
+<li>好了字体能正确显示,但是你们可能是这种颜色配置,<br><img src="/images/Shell/Shell14.png" alt=""></li>
+<li>你们看着不难受的话,今天就到这了,如果感觉颜色不好看的话,可以自己换色啊</li>
+</ul>
+<h4 id="iterm2-colors-solarized"><a href="#iterm2-colors-solarized" class="headerlink" title="iterm2-colors-solarized"></a>iterm2-colors-solarized</h4><ul>
+<li>你们可以先试试其他的颜色配置方案<br><img src="/images/Shell/Shell15.png" alt=""></li>
+<li>或者使用Solarized配色,这个你们需要自己去下载,然后点击<code>import</code>导入就可以了</li>
+<li>iterm2-colors-solarized <a href="https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized" target="_blank" rel="external">下载地址</a><br><img src="/images/Shell/Shell16.png" alt=""></li>
+</ul>
+<h3 id="好了-可以拿去炫耀了"><a href="#好了-可以拿去炫耀了" class="headerlink" title="好了,可以拿去炫耀了"></a>好了,可以拿去炫耀了</h3><p><img src="/images/Shell/Shell2.png" alt=""></p>
+<h2 id="正文结束"><a href="#正文结束" class="headerlink" title="正文结束"></a>正文结束</h2><blockquote>
+<p>如果您看了本篇博客,觉得对您有所收获，请点击右下角的 <del>[分享]</del>，没有！<br>如果您想转载本博客，请注明出处<br>如果您对本文有意见或者建议，欢迎 <del>[留言]</del>，留个屁！<br>感谢您的阅读，请关注我的后续博客</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qq_qun.jpg" alt="melodd wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的qq群号，加入我们的web技术群！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/15/Atom 前端实用插件推荐/" rel="next" title="Atom 前端实用插件推荐">
+                <i class="fa fa-chevron-left"></i> Atom 前端实用插件推荐
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/13/使用SourceTree管理git仓库/" rel="prev" title="使用SourceTree管理git仓库">
+                使用SourceTree管理git仓库 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/melodd.jpg"
+               alt="melodd" />
+          <p class="site-author-name" itemprop="name">melodd</p>
+           
+              <p class="site-description motion-element" itemprop="description">授之于鱼不如授之于渔,你说是不是:小张张。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/melodd-x" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/68742822f0de" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              你要去哪,我给你开个门啊,不要金币的。
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jikexueyuan.com" title="极客学院" target="_blank">极客学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bootcss.com" title="Bootstrap" target="_blank">Bootstrap</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=25906124&auto=0&height=66"></iframe>
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文开始"><span class="nav-number">1.</span> <span class="nav-text">正文开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#首先-介绍下几个概念"><span class="nav-number">1.1.</span> <span class="nav-text">首先:介绍下几个概念?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#–-Shell"><span class="nav-number">1.1.1.</span> <span class="nav-text">– Shell</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#–-终端模拟器"><span class="nav-number">1.1.2.</span> <span class="nav-text">– 终端模拟器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#所以"><span class="nav-number">1.1.3.</span> <span class="nav-text">所以</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#到这-你们应该大致的明白了-你们用的就是terminal-bash"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">到这,你们应该大致的明白了,你们用的就是terminal + bash</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#而我用的是iTerm2-oh-my-zsh-iterm2-colors-solarized-Powerline-fonts-agnoster-zsh-theme"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">而我用的是iTerm2 + oh my zsh + iterm2-colors-solarized + Powerline fonts + agnoster.zsh-theme</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始安装"><span class="nav-number">1.2.</span> <span class="nav-text">开始安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iTerm2"><span class="nav-number">1.2.1.</span> <span class="nav-text">iTerm2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Oh-My-Zsh"><span class="nav-number">1.2.2.</span> <span class="nav-text">Oh My Zsh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#agnoster"><span class="nav-number">1.2.3.</span> <span class="nav-text">agnoster</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Powerline-fonts"><span class="nav-number">1.2.4.</span> <span class="nav-text">Powerline fonts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#iterm2-colors-solarized"><span class="nav-number">1.2.5.</span> <span class="nav-text">iterm2-colors-solarized</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好了-可以拿去炫耀了"><span class="nav-number">1.3.</span> <span class="nav-text">好了,可以拿去炫耀了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文结束"><span class="nav-number">2.</span> <span class="nav-text">正文结束</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">melodd</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pCXnU6xEUiaeVE9A805iTvmv-gzGzoHsz", "KUsTxa5wdFVWfgbfVBzJ2urt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

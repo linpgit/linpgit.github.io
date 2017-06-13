@@ -1,0 +1,1000 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Atom," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon1.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="看之前首先，看这篇文章之前，你应该知道如何查找和安装atom插件，如果不会的话，那也不要紧。 对不起，我不教。">
+<meta name="keywords" content="Atom">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Atom 前端实用插件推荐">
+<meta property="og:url" content="http://melodd-blog.github.io/2017/04/15/Atom 前端实用插件推荐/index.html">
+<meta property="og:site_name" content="Melodd Blog">
+<meta property="og:description" content="看之前首先，看这篇文章之前，你应该知道如何查找和安装atom插件，如果不会的话，那也不要紧。 对不起，我不教。">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom1.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-02.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-01.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-03.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-04@2x.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-05@2x.png">
+<meta property="og:image" content="https://i.github-camo.com/d05794bdd4aa15ef50f4038a2fa92ed88ef72880/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f333530353837382f373434323533382f39633138393263632d663131652d313165342d383037302d3366613862373962656566632e676966">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-6.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-7.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-8.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-9.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-10.png">
+<meta property="og:image" content="https://cdn.scotch.io/1298/jF8DXzQrRySBL2E2WJGU_68747470733a2f2f6769746875622e636f6d2f74686f6d61736c696e647374726f6d2f636f6c6f722d7069636b65722f7261772f6d61737465722f707265766965772e676966.gif">
+<meta property="og:image" content="https://i.github-camo.com/103d6c0f7bbbb4eab5268af5cfb30f99e9b5d3e2/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616461727272612f6373732d636f6c6f722d6e616d652f6d61737465722f6373735f636f6c6f725f6e616d655f707265766965772e706e67">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-11.png">
+<meta property="og:image" content="http://www.myexception.cn/img/2015/08/22/081540108.png">
+<meta property="og:image" content="http://www.myexception.cn/img/2015/08/22/081540109.png">
+<meta property="og:image" content="https://i.github-camo.com/b1d03b9b7a9d7dc9a32d1eab307b5378f8c59a7b/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3638383431352f31313631353536352f31306631363435362d396336352d313165352d386166342d3236356630316663383361302e676966">
+<meta property="og:image" content="https://i.github-camo.com/ca572e22e64a42c44f59e1ebb40d4a1e1b748761/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f31303539303739392f31383831373233372f38373663326438342d383332312d313165362d383332342d6631353430363034633062642e676966">
+<meta property="og:image" content="https://i.github-camo.com/a7fa1da3b5b4bdea00b5d25591f47e0751f64d4e/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f343237383131332f32333837393933332f31616231376532612d303837322d313165372d383033642d3366653063636663363739302e676966">
+<meta property="og:image" content="https://i.github-camo.com/78e2bafa5f9b3afdf47d7e02e3f949fea4801fc0/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616b6f6e77692f6769742d706c75732f6d61737465722f636f6d6d69742e676966">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-12.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-13.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-14.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-15.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-16.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-17.png">
+<meta property="og:image" content="http://melodd-blog.github.io/images/atom01-18.png">
+<meta property="og:updated_time" content="2017-05-13T13:20:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Atom 前端实用插件推荐">
+<meta name="twitter:description" content="看之前首先，看这篇文章之前，你应该知道如何查找和安装atom插件，如果不会的话，那也不要紧。 对不起，我不教。">
+<meta name="twitter:image" content="http://melodd-blog.github.io/images/atom1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://melodd-blog.github.io/2017/04/15/Atom 前端实用插件推荐/"/>
+
+
+
+
+
+  <title> Atom 前端实用插件推荐 | Melodd Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7e0f95d0020030ed9a9aacb476d4b710";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Melodd Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">明年是你的本命年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://melodd-blog.github.io/2017/04/15/Atom 前端实用插件推荐/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="melodd">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/melodd.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Melodd Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Atom 前端实用插件推荐
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T21:21:14+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/15/Atom 前端实用插件推荐/" class="leancloud_visitors" data-flag-title="Atom 前端实用插件推荐">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <!-- ![](/images/atom1.png) -->
+<p><img src="/images/atom1.png" class="full-image"></p>
+<h2 id="看之前"><a href="#看之前" class="headerlink" title="看之前"></a>看之前</h2><p>首先，看这篇文章之前，你应该知道如何查找和安装atom插件，如果不会的话，那也不要紧。</p>
+<div class="note info"><p>对不起，我不教。 </p>
+</div>
+<a id="more"></a>
+<p><code>O(∩_∩)O~，开玩笑的。</code></p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><ol>
+<li>打开Atom的设置——Install-然后直接搜索插件名字，找到插件后直接点击install按钮就可以了。<br><img src="/images/atom01-02.png" alt=""></li>
+<li><p>打开终端工具，直接输入<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm install atom-clock</div></pre></td></tr></table></figure></p>
+<p><code>atom-clock</code>就是插件的名字</p>
+</li>
+</ol>
+<h2 id="干货-根据你自己需求安装"><a href="#干货-根据你自己需求安装" class="headerlink" title="干货(根据你自己需求安装)"></a>干货(根据你自己需求安装)</h2><h3 id="atom-clock"><a href="#atom-clock" class="headerlink" title="atom-clock"></a><code>atom-clock</code></h3><p>显示系统时间<br>这基本上是给mac用户的一个插件，因为时间显示的地方是在Atom界面的右下角，windows系统时间默认就是在右下角，全屏也会在右下角有系统时间显示，除非你隐藏任务栏；然而mac系统是在右上角显示时间，全屏后就不会显示了。<br><img src="/images/atom01-01.png" alt=""></p>
+<h3 id="atom-beautify"><a href="#atom-beautify" class="headerlink" title="atom-beautify"></a><code>atom-beautify</code></h3><p>让代码格式更规范好看些<br><img src="/images/atom01-03.png" alt=""></p>
+<h3 id="file-icons"><a href="#file-icons" class="headerlink" title="file-icons"></a><code>file-icons</code></h3><p>文件图标<br>里面有海量的图标，每种不同的文件都有不用的图标来显示，装完之后，atom瞬间上了一个档次。<br><img src="/images/atom01-04@2x.png" alt=""></p>
+<h3 id="minimap"><a href="#minimap" class="headerlink" title="minimap"></a><code>minimap</code></h3><p>迷你地图<br>在你的atom右上角显示一个迷你地图，鼠标移上去后有齿轮，可以设置<br><img src="/images/atom01-05@2x.png" alt=""></p>
+<h3 id="autocomplete-modules"><a href="#autocomplete-modules" class="headerlink" title="autocomplete-modules"></a><code>autocomplete-modules</code></h3><p>模块名自动补全<br><img src="https://i.github-camo.com/d05794bdd4aa15ef50f4038a2fa92ed88ef72880/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f333530353837382f373434323533382f39633138393263632d663131652d313165342d383037302d3366613862373962656566632e676966" alt=""></p>
+<h3 id="autocomplete-paths"><a href="#autocomplete-paths" class="headerlink" title="autocomplete-paths"></a><code>autocomplete-paths</code></h3><p>自动文件路径提示<br>很方便的一个插件，如果安了插件，你的路径都是全拼出来的，那拼错的的概率很大<br><img src="/images/atom01-6.png" alt=""></p>
+<h3 id="simplified-chinese-menu"><a href="#simplified-chinese-menu" class="headerlink" title="simplified-chinese-menu"></a><code>simplified-chinese-menu</code></h3><p>简体中文包<br>英文不是很好的同学可以下载使用这个插件，但是有时候会导致设置页面的错位的情况，自己看情况使用。<br><img src="/images/atom01-7.png" alt=""></p>
+<h3 id="atom-bootstrap3"><a href="#atom-bootstrap3" class="headerlink" title="atom-bootstrap3"></a><code>atom-bootstrap3</code></h3><p>bootstrap 的自动代码提示<br>bootstrap 的class名那么长，谁能记得住啊，记住用法才是重点，名字就交给这个插件。</p>
+<blockquote>
+<p>没图就不能脑补了吗？</p>
+</blockquote>
+<h3 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open-in-browser"></a><code>open-in-browser</code></h3><p>打开浏览器预览<br>前端程序猿的开发利器，直接会在右键菜单里添加open-in-browser的选项，点击就能打开浏览器了，但是打开的是默认的浏览器</p>
+<blockquote>
+<p>身为一个程序猿，这还需要图？</p>
+</blockquote>
+<h3 id="browser-plus"><a href="#browser-plus" class="headerlink" title="browser-plus"></a><code>browser-plus</code></h3><p>打开atomn内置浏览器预览页面<br>也是右键选择打开，内置浏览器用的是webkit的内核<br><img src="/images/atom01-8.png" alt=""></p>
+<h3 id="open-in-browsers"><a href="#open-in-browsers" class="headerlink" title="open-in-browsers"></a><code>open-in-browsers</code></h3><p>打开更多的浏览器<br>请注意：和上上个插件<code>open-in-browser</code>不一样，多了一个s，但是功能强大了很多，<br>右键你的html文件打开选项，<code>tip:鼠标放到文字上右键，否则自己领悟痛苦把。</code><br><img src="/images/atom01-9.png" alt=""><br>直接点击按钮，在atom的左下角，分别是：IE，Google Chrome，Firefox，Opera，Safari，（最后一个你应该猜的出来，猜不出来也没关系，说明你比一般人笨一点而已。）<br><img src="/images/atom01-10.png" alt=""></p>
+<h3 id="simple-drag-drop-text"><a href="#simple-drag-drop-text" class="headerlink" title="simple-drag-drop-text"></a><code>simple-drag-drop-text</code></h3><p>拖动代码段<br>不需要拷贝加粘贴，直接选中你要拖动的代码段，然后按住鼠标直接拖动到指定位置</p>
+<blockquote>
+<p>我就是图</p>
+</blockquote>
+<h3 id="color-picker"><a href="#color-picker" class="headerlink" title="color-picker"></a><code>color-picker</code></h3><p>取色器<br>当你需要颜色的时候，在任意位置，<code>shift</code>+<code>command</code>+<code>c</code>键直接出来取色界面，（windows用户脑补键位）<br><img src="https://cdn.scotch.io/1298/jF8DXzQrRySBL2E2WJGU_68747470733a2f2f6769746875622e636f6d2f74686f6d61736c696e647374726f6d2f636f6c6f722d7069636b65722f7261772f6d61737465722f707265766965772e676966.gif" alt=""></p>
+<h3 id="css-color-name"><a href="#css-color-name" class="headerlink" title="css-color-name"></a><code>css-color-name</code></h3><p>提示颜色代码<br><img src="https://i.github-camo.com/103d6c0f7bbbb4eab5268af5cfb30f99e9b5d3e2/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616461727272612f6373732d636f6c6f722d6e616d652f6d61737465722f6373735f636f6c6f725f6e616d655f707265766965772e706e67" alt=""></p>
+<h3 id="pigments"><a href="#pigments" class="headerlink" title="pigments"></a><code>pigments</code></h3><p>color name 和rgba还有其他的一些颜色类代码，让他们在编译器页面显示颜色<br><img src="/images/atom01-11.png" alt=""><br>还可以通过插件里的<code>Marker Type</code>设置显示颜色的样式</p>
+<h3 id="emmet"><a href="#emmet" class="headerlink" title="emmet"></a><code>emmet</code></h3><p>HTML/CSS代码快速编写神器<br>快速手写 HTML, CSS, Sass / SCSS / LESS</p>
+<ul>
+<li>比如输入“!”或“html:5”，然后按Tab键生成HTMl初始化</li>
+<li>比如轻松添加类、id、文本和属性</li>
+<li>比如，ul&gt;li*3可以生成多个标签</li>
+<li>……<br>详细版的说明:<a href="http://www.iteye.com/news/27580" target="_blank" rel="external">http://www.iteye.com/news/27580</a></li>
+</ul>
+<h3 id="atom-ternjs"><a href="#atom-ternjs" class="headerlink" title="atom-ternjs"></a><code>atom-ternjs</code></h3><p>ES5, ES6, ES7, Node.js, jQuery, Angular 等等 js 代码自动补全</p>
+<blockquote>
+<p>要什么共享单车</p>
+</blockquote>
+<h3 id="jquery-snippets"><a href="#jquery-snippets" class="headerlink" title="jquery-snippets"></a><code>jquery-snippets</code></h3><p>jquery代码片段补全<br>一款可以快速写JQ的插件，输入snippet简写,tab键或者Enter触发补全，基本涵盖了JQ的所有方法和事件。<br><img src="http://www.myexception.cn/img/2015/08/22/081540108.png" alt=""><br><img src="http://www.myexception.cn/img/2015/08/22/081540109.png" alt=""></p>
+<h3 id="css-snippets"><a href="#css-snippets" class="headerlink" title="css-snippets"></a><code>css-snippets</code></h3><p>css代码片段补全<br>同理，css代码补全</p>
+<blockquote>
+<p>接下来的图片请脑补</p>
+</blockquote>
+<h3 id="javascript-snippets"><a href="#javascript-snippets" class="headerlink" title="javascript-snippets"></a><code>javascript-snippets</code></h3><p>原生javascript代码片段补全<br>同理，js代码补全，写代码效率提高20%</p>
+<blockquote>
+<p>要什么自行车</p>
+</blockquote>
+<h3 id="activate-power-mode"><a href="#activate-power-mode" class="headerlink" title="activate-power-mode"></a><code>activate-power-mode</code></h3><p>一个小游戏而已，有强迫症的别玩，伤身体，玩多了，那地方会虚的<br><img src="https://i.github-camo.com/b1d03b9b7a9d7dc9a32d1eab307b5378f8c59a7b/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3638383431352f31313631353536352f31306631363435362d396336352d313165352d386166342d3236356630316663383361302e676966" alt=""><br><img src="https://i.github-camo.com/ca572e22e64a42c44f59e1ebb40d4a1e1b748761/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f31303539303739392f31383831373233372f38373663326438342d383332312d313165362d383332342d6631353430363034633062642e676966" alt=""></p>
+<h3 id="sync-settings"><a href="#sync-settings" class="headerlink" title="sync-settings"></a><code>sync-settings</code></h3><p>备份插件<br>可以备份ATOM的全局设置、插件、按键绑定(keymaps)、界面样式、代码片段(snippets )、 init script。<br>详细版说明：<a href="http://blog.csdn.net/zsl10/article/details/51891306" target="_blank" rel="external">http://blog.csdn.net/zsl10/article/details/51891306</a></p>
+<h3 id="linter"><a href="#linter" class="headerlink" title="linter"></a><code>linter</code></h3><p>基本语法检查框架<br> <code>linter-ui-default</code><br>显示，警告，错误界面<br>必须安装以上两个插件，才能安装下面的插件。</p>
+<ol>
+<li><code>linter-jshint</code> js代码检查工具</li>
+<li><code>linter-csslint</code> css代码检查工具</li>
+<li><code>linter-htmlhint</code> HTML代码检查工具<br><img src="https://i.github-camo.com/a7fa1da3b5b4bdea00b5d25591f47e0751f64d4e/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f343237383131332f32333837393933332f31616231376532612d303837322d313165372d383033642d3366653063636663363739302e676966" alt=""></li>
+</ol>
+<h3 id="git-plus"><a href="#git-plus" class="headerlink" title="git-plus"></a><code>git-plus</code></h3><p>丢掉终端，在 Atom 里面执行 Git 命令<br><img src="https://i.github-camo.com/78e2bafa5f9b3afdf47d7e02e3f949fea4801fc0/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f616b6f6e77692f6769742d706c75732f6d61737465722f636f6d6d69742e676966" alt=""></p>
+<h3 id="完"><a href="#完" class="headerlink" title="完"></a>完</h3><h3 id=""><a href="#" class="headerlink" title="."></a>.</h3><h3 id="-1"><a href="#-1" class="headerlink" title="."></a>.</h3><h3 id="-2"><a href="#-2" class="headerlink" title="."></a>.</h3><h3 id="-3"><a href="#-3" class="headerlink" title="."></a>.</h3><h3 id="好吧，骗你了，最后来个很带感的UI主题"><a href="#好吧，骗你了，最后来个很带感的UI主题" class="headerlink" title="好吧，骗你了，最后来个很带感的UI主题"></a>好吧，骗你了，最后来个很带感的UI主题</h3><blockquote>
+<p>就骗你了，怎么了。</p>
+</blockquote>
+<p>没错，就是它<code>atom-material-ui</code><br><img src="/images/atom01-12.png" alt=""><br>觉得不好看的跳过，下面的不用看了。<br>觉得好看的，我们两继续：<br>记得在install里面选择themes搜索<br><img src="/images/atom01-13.png" alt=""><br>安装完成后，打开插件设置<br><img src="/images/atom01-14.png" alt=""><br>然后我们开始设置，<br>来跟着我一起设置看看效果<br>前方多图预览<br><img src="/images/atom01-15.png" alt=""><br><img src="/images/atom01-16.png" alt=""><br><img src="/images/atom01-17.png" alt=""><br><img src="/images/atom01-18.png" alt=""></p>
+<p>好了，最后给你们三个同系列的，代码颜色主题<br><code>atom-material-syntax</code><br><code>atom-material-syntax-dark</code><br><code>atom-material-syntax-light</code></p>
+<h3 id="完-1"><a href="#完-1" class="headerlink" title="完"></a>完</h3><p> 这次不骗你，真的结束了。<br> 推荐：<a href="https://atom.io/packages" target="_blank" rel="external">atom官方插件库</a><br> 推荐：<a href="https://atom.io/themes" target="_blank" rel="external">atom官方主题库</a></p>
+<blockquote>
+<p>如果您看了本篇博客,觉得对您有所收获，请点击右下角的 <del>[分享]</del>，没有！<br>如果您想转载本博客，请注明出处<br>如果您对本文有意见或者建议，欢迎 <del>[留言]</del>，留个屁！<br>感谢您的阅读，请关注我的后续博客</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/qq_qun.jpg" alt="melodd wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的qq群号，加入我们的web技术群！</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Atom/" rel="tag"># Atom</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/13/打造Mac下的终极Shell/" rel="prev" title="打造Mac下的终极Shell">
+                打造Mac下的终极Shell <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/melodd.jpg"
+               alt="melodd" />
+          <p class="site-author-name" itemprop="name">melodd</p>
+           
+              <p class="site-description motion-element" itemprop="description">授之于鱼不如授之于渔,你说是不是:小张张。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/melodd-x" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/68742822f0de" target="_blank" title="简书">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  简书
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              你要去哪,我给你开个门啊,不要金币的。
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.baidu.com" title="百度" target="_blank">百度</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jikexueyuan.com" title="极客学院" target="_blank">极客学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.bootcss.com" title="Bootstrap" target="_blank">Bootstrap</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=25906124&auto=0&height=66"></iframe>
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#看之前"><span class="nav-number">1.</span> <span class="nav-text">看之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方法"><span class="nav-number">2.</span> <span class="nav-text">安装方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#干货-根据你自己需求安装"><span class="nav-number">3.</span> <span class="nav-text">干货(根据你自己需求安装)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#atom-clock"><span class="nav-number">3.1.</span> <span class="nav-text">atom-clock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom-beautify"><span class="nav-number">3.2.</span> <span class="nav-text">atom-beautify</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#file-icons"><span class="nav-number">3.3.</span> <span class="nav-text">file-icons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#minimap"><span class="nav-number">3.4.</span> <span class="nav-text">minimap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autocomplete-modules"><span class="nav-number">3.5.</span> <span class="nav-text">autocomplete-modules</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autocomplete-paths"><span class="nav-number">3.6.</span> <span class="nav-text">autocomplete-paths</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simplified-chinese-menu"><span class="nav-number">3.7.</span> <span class="nav-text">simplified-chinese-menu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom-bootstrap3"><span class="nav-number">3.8.</span> <span class="nav-text">atom-bootstrap3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#open-in-browser"><span class="nav-number">3.9.</span> <span class="nav-text">open-in-browser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#browser-plus"><span class="nav-number">3.10.</span> <span class="nav-text">browser-plus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#open-in-browsers"><span class="nav-number">3.11.</span> <span class="nav-text">open-in-browsers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-drag-drop-text"><span class="nav-number">3.12.</span> <span class="nav-text">simple-drag-drop-text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#color-picker"><span class="nav-number">3.13.</span> <span class="nav-text">color-picker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-color-name"><span class="nav-number">3.14.</span> <span class="nav-text">css-color-name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pigments"><span class="nav-number">3.15.</span> <span class="nav-text">pigments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#emmet"><span class="nav-number">3.16.</span> <span class="nav-text">emmet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#atom-ternjs"><span class="nav-number">3.17.</span> <span class="nav-text">atom-ternjs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jquery-snippets"><span class="nav-number">3.18.</span> <span class="nav-text">jquery-snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-snippets"><span class="nav-number">3.19.</span> <span class="nav-text">css-snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-snippets"><span class="nav-number">3.20.</span> <span class="nav-text">javascript-snippets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#activate-power-mode"><span class="nav-number">3.21.</span> <span class="nav-text">activate-power-mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sync-settings"><span class="nav-number">3.22.</span> <span class="nav-text">sync-settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linter"><span class="nav-number">3.23.</span> <span class="nav-text">linter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-plus"><span class="nav-number">3.24.</span> <span class="nav-text">git-plus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完"><span class="nav-number">3.25.</span> <span class="nav-text">完</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">3.26.</span> <span class="nav-text">.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-1"><span class="nav-number">3.27.</span> <span class="nav-text">.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-2"><span class="nav-number">3.28.</span> <span class="nav-text">.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#-3"><span class="nav-number">3.29.</span> <span class="nav-text">.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好吧，骗你了，最后来个很带感的UI主题"><span class="nav-number">3.30.</span> <span class="nav-text">好吧，骗你了，最后来个很带感的UI主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完-1"><span class="nav-number">3.31.</span> <span class="nav-text">完</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">melodd</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("pCXnU6xEUiaeVE9A805iTvmv-gzGzoHsz", "KUsTxa5wdFVWfgbfVBzJ2urt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
