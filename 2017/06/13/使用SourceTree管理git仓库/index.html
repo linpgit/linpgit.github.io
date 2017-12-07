@@ -94,6 +94,7 @@
 <meta property="og:url" content="http://www.baidu.com/2017/06/13/使用SourceTree管理git仓库/index.html">
 <meta property="og:site_name" content="Allen Blog">
 <meta property="og:description" content="使用Terminal或CMD管理git仓库太麻烦,我们可以使用SourceTree这样的图形界面软件来轻松的管理我们的git仓库">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.baidu.com/images/03/01.png">
 <meta property="og:image" content="http://www.baidu.com/images/03/03.png">
 <meta property="og:image" content="http://www.baidu.com/images/03/04.png">
@@ -601,7 +602,7 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/melodd-x" target="_blank" title="GitHub">
+                <a href="https://github.com/linpgit" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -666,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库我们已经建立好了-接下来-该SourceTree登场"><span class="nav-number">1.</span> <span class="nav-text">github仓库我们已经建立好了,接下来,该SourceTree登场</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#和使用Terminal一样-第一步就是clone我们的远程仓库到本地来"><span class="nav-number">1.1.</span> <span class="nav-text">和使用Terminal一样,第一步就是clone我们的远程仓库到本地来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候-我刚把我的项目都考进了我的本地仓库下"><span class="nav-number">1.2.</span> <span class="nav-text">这时候,我刚把我的项目都考进了我的本地仓库下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候提交-上传到本地仓库"><span class="nav-number">1.3.</span> <span class="nav-text">这时候提交,上传到本地仓库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#github仓库我们已经建立好了-接下来-该SourceTree登场"><span class="nav-number">1.</span> <span class="nav-text"><a href="#github&#x4ED3;&#x5E93;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x597D;&#x4E86;-&#x63A5;&#x4E0B;&#x6765;-&#x8BE5;SourceTree&#x767B;&#x573A;" class="headerlink" title="github&#x4ED3;&#x5E93;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x597D;&#x4E86;,&#x63A5;&#x4E0B;&#x6765;,&#x8BE5;SourceTree&#x767B;&#x573A;"></a>github&#x4ED3;&#x5E93;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x597D;&#x4E86;,&#x63A5;&#x4E0B;&#x6765;,&#x8BE5;SourceTree&#x767B;&#x573A;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#和使用Terminal一样-第一步就是clone我们的远程仓库到本地来"><span class="nav-number">1.1.</span> <span class="nav-text"><a href="#&#x548C;&#x4F7F;&#x7528;Terminal&#x4E00;&#x6837;-&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;clone&#x6211;&#x4EEC;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730;&#x6765;" class="headerlink" title="&#x548C;&#x4F7F;&#x7528;Terminal&#x4E00;&#x6837;,&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;clone&#x6211;&#x4EEC;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730;&#x6765;"></a>&#x548C;&#x4F7F;&#x7528;Terminal&#x4E00;&#x6837;,&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;clone&#x6211;&#x4EEC;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5230;&#x672C;&#x5730;&#x6765;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候-我刚把我的项目都考进了我的本地仓库下"><span class="nav-number">1.2.</span> <span class="nav-text"><a href="#&#x8FD9;&#x65F6;&#x5019;-&#x6211;&#x521A;&#x628A;&#x6211;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x8003;&#x8FDB;&#x4E86;&#x6211;&#x7684;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4E0B;" class="headerlink" title="&#x8FD9;&#x65F6;&#x5019;,&#x6211;&#x521A;&#x628A;&#x6211;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x8003;&#x8FDB;&#x4E86;&#x6211;&#x7684;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4E0B;"></a>&#x8FD9;&#x65F6;&#x5019;,&#x6211;&#x521A;&#x628A;&#x6211;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x8003;&#x8FDB;&#x4E86;&#x6211;&#x7684;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x4E0B;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#这时候提交-上传到本地仓库"><span class="nav-number">1.3.</span> <span class="nav-text"><a href="#&#x8FD9;&#x65F6;&#x5019;&#x63D0;&#x4EA4;-&#x4E0A;&#x4F20;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;" class="headerlink" title="&#x8FD9;&#x65F6;&#x5019;&#x63D0;&#x4EA4;,&#x4E0A;&#x4F20;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;"></a>&#x8FD9;&#x65F6;&#x5019;&#x63D0;&#x4EA4;,&#x4E0A;&#x4F20;&#x5230;&#x672C;&#x5730;&#x4ED3;&#x5E93;</span></a></li></ol></li></ol></div>
             
 
           </div>
